@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Abhijeet Waikar - Developer Portfolio</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+      color: #333;
+    }
+    header {
+      background-color: #0077b5;
+      color: white;
+      padding: 40px;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.5em;
+    }
+    header p {
+      font-size: 1.2em;
+    }
+    section {
+      padding: 40px 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+    h2 {
+      font-size: 2em;
+      margin-bottom: 20px;
+    }
+    .project-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    .project-card {
+      background-color: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      flex: 1 1 calc(33% - 40px);
+      min-width: 250px;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #222;
+      color: white;
+    }
+    a {
+      color: #0077b5;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Abhijeet Waikar</h1>
+  <p>Java Developer | Full-Stack Enthusiast</p>
+</header>
+
+<section id="about">
+  <h2>About Me</h2>
+  <p>Hello! I'm <strong>Abhijeet Waikar</strong>, a passionate developer experienced in Java, full-stack development, and creating scalable web applications. I enjoy solving problems with clean and efficient code.</p>
+</section>
+
+<!--<section id="projects">-->
+ <!-- <h2>Projects</h2> -->
+ <!-- <div class="project-list" id="projectContainer"> -->
+    <!-- Projects will be loaded here by JavaScript -->
+  <!-- </div> -->
+<!-- </section> -->
+  
+
+<section id="contact">
+  <h2>Contact</h2>
+  <p>Email: <a href="mailto:waikarabhijeet@gmail.com">waikarabhijeet@gmail.com</a></p>
+  <p>LinkedIn: <a href="https://www.linkedin.com/in/abhijeet-waikar-developer/" target="_blank">linkedin.com/in/abhijeet-waikar-developer</a></p>
+  <p>GitHub: <a href="https://github.com/abhijeet-waikar" target="_blank">github.com/abhijeet-waikar</a></p>
+</section>
+
+<footer>
+  &copy; 2025 Abhijeet Waikar. All rights reserved.
+</footer>
+
+<script>
+  const projects = [
+    {
+      name: "Task Manager App",
+      description: "A productivity tool to manage daily tasks with notifications and deadlines."
+    },
+    {
+      name: "E-commerce Platform",
+      description: "An online shopping system built with Java and Spring Boot."
+    },
+    {
+      name: "Portfolio Website",
+      description: "Responsive personal website to showcase projects and skills."
+    }
+  ];
+
+  const container = document.getElementById('projectContainer');
+  projects.forEach(project => {
+    const card = document.createElement('div');
+    card.className = 'project-card';
+    card.innerHTML = `<h3>${project.name}</h3><p>${project.description}</p>`;
+    container.appendChild(card);
+  });
+</script>
+
+</body>
+</html>
